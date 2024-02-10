@@ -1,6 +1,6 @@
---js test\bin\test.js
+--js dummy.js
+--no-output
 --library threejs
 --class-path library
 --class-path test
---macro include("js.three")
 --main Main
