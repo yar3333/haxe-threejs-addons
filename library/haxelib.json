@@ -1,0 +1,11 @@
+{
+  "name": "threejs-addons",
+  "license": "BSD",
+  "tags": ["js","three","threejs","extern"],
+  "description": "Externs for three.js addons. Automated conversion from typescript (https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/threejs).",
+  "contributors": ["yar3333"],
+  "releasenote": "init",
+  "version": "91.0.1",
+  "url": "https://github.com/yar3333/haxe-threejs",
+  "dependencies": {}
+}
