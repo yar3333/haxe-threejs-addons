@@ -6,8 +6,6 @@ import js.three.geometries.BoxGeometry;
 import js.three.cameras.PerspectiveCamera;
 import js.three.renderers.WebGLRenderer;
 import js.three.scenes.Scene;
-
-//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import js.three.addons.controls.OrbitControls;
 
 function main()
@@ -35,15 +33,15 @@ function main()
     function render() {
         renderer.render(scene, camera);
     }
+
     function onWindowResize(_) {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
         render();
-    };
+    }
 
     window.addEventListener('resize', onWindowResize, false);
-
 
     function animate() {
         window.requestAnimationFrame((_) -> animate());
