@@ -4,3 +4,4 @@
 --class-path library
 --class-path test
 --main Main
+js.three.addons.controls.OrbitControls

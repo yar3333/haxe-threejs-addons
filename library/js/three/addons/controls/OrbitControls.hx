@@ -1,15 +1,16 @@
 package js.three.addons.controls;
 
+import js.html.Element;
 import js.html.Window;
 import js.three.math.Vector3;
 import js.html.Document;
-import js.html.HtmlElement;
 import js.three.cameras.Camera;
 import js.three.core.EventDispatcher;
 
 /**
  * Orbit controls allow the camera to orbit around a target.
  */
+@:jsRequire("three/examples/jsm/controls/OrbitControls.js", "OrbitControls")
 @:native("OrbitControls")
 extern class OrbitControls extends EventDispatcher<OrbitControlsEventMap>
 {
@@ -22,7 +23,7 @@ extern class OrbitControls extends EventDispatcher<OrbitControlsEventMap>
 	 * This must be passed in the constructor;
 	 * changing it here will not set up new event listeners.
 	 */
-	var domElement : haxe.extern.EitherType<HtmlElement, Document>;
+	var domElement : haxe.extern.EitherType<Element, Document>;
 	/**
 	 * When set to `false`, the controls will not respond to user input.
 	 * @default true
@@ -215,7 +216,7 @@ extern class OrbitControls extends EventDispatcher<OrbitControlsEventMap>
 	/**
 	 * Orbit controls allow the camera to orbit around a target.
 	 */
-	function new(object:Camera, ?domElement:HtmlElement) : Void;
+	function new(object:Camera, ?domElement:Element) : Void;
 	/**
 	 * Update the controls. Must be called after any manual changes to the camera's transform, or in the update loop if
 	 * .autoRotate or .enableDamping are set. `deltaTime`, in seconds, is optional, and is only required if you want the
@@ -226,7 +227,7 @@ extern class OrbitControls extends EventDispatcher<OrbitControlsEventMap>
 	 * Adds key event listeners to the given DOM element. `window`
 	 * is a recommended argument for using this method.
 	 */
-	function listenToKeyEvents(domElement:haxe.extern.EitherType<HtmlElement, Window>) : Void;
+	function listenToKeyEvents(domElement:haxe.extern.EitherType<Element, Window>) : Void;
 	/**
 	 * Removes the key event listener previously defined with {@link listenToKeyEvents}.
 	 */
