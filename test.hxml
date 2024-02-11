@@ -5,3 +5,4 @@
 --class-path test
 --main Main
 js.three.addons.controls.OrbitControls
+js.three.addons.loaders.GLTFLoader

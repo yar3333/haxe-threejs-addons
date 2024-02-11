@@ -1,4 +1,4 @@
-package js.three.addons.libs;
+package js.three.addons.libs.tween;
 
 /**
  * Tween.js - Licensed under the MIT license
@@ -60,30 +60,32 @@ extern class Tween<T:UnknownProps>
 	function getId() : Float;
 	function isPlaying() : Bool;
 	function isPaused() : Bool;
-	function to(target:UnknownProps, ?duration:Float) : Tween;
-	function duration(?duration:Float) : Tween;
-	inline function dynamic_(?dynamic_:Bool) : Tween return (cast this)[cast 'dynamic'](dynamic);
-	function start(?time:Float, ?overrideStartingValues:Bool) : Tween;
-	function startFromCurrentValues(?time:Float) : Tween;
-	function stop() : Tween;
-	function end() : Tween;
-	function pause(?time:Float) : Tween;
-	function resume(?time:Float) : Tween;
-	function stopChainedTweens() : Tween;
-	function group(?group:Group) : Tween;
-	function delay(?amount:Float) : Tween;
-	function repeat(?times:Float) : Tween;
-	function repeatDelay(?amount:Float) : Tween;
-	function yoyo(?yoyo:Bool) : Tween;
-	function easing(?easingFunction:EasingFunction) : Tween;
-	function interpolation(?interpolationFunction:InterpolationFunction) : Tween;
-	function chain(tweens:Array<Tween<Dynamic>>) : Tween;
-	function onStart(?callback:T->Void) : Tween;
-	function onEveryStart(?callback:T->Void) : Tween;
-	function onUpdate(?callback:T->Float->Void) : Tween;
-	function onRepeat(?callback:T->Void) : Tween;
-	function onComplete(?callback:T->Void) : Tween;
-	function onStop(?callback:T->Void) : Tween;
+	function to(target:UnknownProps, ?duration:Float) : Tween<T>;
+	function duration(?duration:Float) : Tween<T>;
+	// dynamic(dynamic?: boolean): this;
+    @:native("dynamic")
+    function dynamic_(?dynamic_:Bool) : Tween<T>;
+	function start(?time:Float, ?overrideStartingValues:Bool) : Tween<T>;
+	function startFromCurrentValues(?time:Float) : Tween<T>;
+	function stop() : Tween<T>;
+	function end() : Tween<T>;
+	function pause(?time:Float) : Tween<T>;
+	function resume(?time:Float) : Tween<T>;
+	function stopChainedTweens() : Tween<T>;
+	function group(?group:Group) : Tween<T>;
+	function delay(?amount:Float) : Tween<T>;
+	function repeat(?times:Float) : Tween<T>;
+	function repeatDelay(?amount:Float) : Tween<T>;
+	function yoyo(?yoyo:Bool) : Tween<T>;
+	function easing(?easingFunction:EasingFunction) : Tween<T>;
+	function interpolation(?interpolationFunction:InterpolationFunction) : Tween<T>;
+	function chain(tweens:Array<Tween<Dynamic>>) : Tween<T>;
+	function onStart(?callback:T->Void) : Tween<T>;
+	function onEveryStart(?callback:T->Void) : Tween<T>;
+	function onUpdate(?callback:T->Float->Void) : Tween<T>;
+	function onRepeat(?callback:T->Void) : Tween<T>;
+	function onComplete(?callback:T->Void) : Tween<T>;
+	function onStop(?callback:T->Void) : Tween<T>;
 	/**
 	 * @returns true if the tween is still playing after the update, false
 	 * otherwise (calling update on a paused tween still returns true because

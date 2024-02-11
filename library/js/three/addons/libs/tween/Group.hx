@@ -1,4 +1,4 @@
-package js.three.addons.libs;
+package js.three.addons.libs.tween;
 
 /**
  * Controlling groups of tweens
