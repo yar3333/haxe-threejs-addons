@@ -1,5 +1,8 @@
 package js.three.addons.renderers;
 
+import js.three.core.Object3D;
+
+@:jsRequire("three/examples/jsm/renderers/Info.js", "Info")
 @:native("Info")
 extern class Info
 {
@@ -12,8 +15,13 @@ extern class Info
 	var timestamp : { var compute : Float; var render : Float; };
 
 	function update(object:Object3D, count:Float, instanceCount:Float) : Void;
-	function updateTimestamp(type:keyof, time:Float) : Void;
-	function resetCompute() : Void;
+	
+    /**
+        type = "compute" | "render" ???
+    **/
+    function updateTimestamp(type:String, time:Float) : Void;
+	
+    function resetCompute() : Void;
 	function reset() : Void;
 	function dispose() : Void;
 }

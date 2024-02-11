@@ -1,5 +1,12 @@
 package js.three.addons.loaders;
 
+import js.html.ErrorEvent;
+import js.lib.ArrayBuffer;
+import js.lib.Promise;
+import js.three.loaders.LoadingManager;
+import js.three.loaders.Loader;
+
+@:jsRequire("three/examples/jsm/loaders/GLTFLoader.js", "GLTFLoader")
 @:native("GLTFLoader")
 extern class GLTFLoader extends Loader<GLTF>
 {

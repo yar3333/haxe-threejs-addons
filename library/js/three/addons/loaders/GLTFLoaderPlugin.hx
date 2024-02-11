@@ -1,17 +1,28 @@
 package js.three.addons.loaders;
 
-extern interface GLTFLoaderPlugin
+import js.lib.Promise;
+import haxe.extern.EitherType;
+import js.three.objects.SkinnedMesh;
+import js.three.objects.Mesh;
+import js.three.objects.Group;
+import js.three.core.Object3D;
+import js.three.materials.Material;
+import js.lib.ArrayBuffer;
+import js.three.textures.Texture;
+
+typedef GLTFLoaderPlugin =
 {
 	var name(default, null) : String;
-	@:optional var beforeRoot : haxe.extern.EitherType<(Void->Promise<Void>), {}>;
-	@:optional var afterRoot : haxe.extern.EitherType<(GLTF->Promise<Void>), {}>;
-	@:optional var loadNode : haxe.extern.EitherType<(Float->Promise<Object3D>), {}>;
-	@:optional var loadMesh : haxe.extern.EitherType<(Float->Promise<haxe.extern.EitherType<Group, haxe.extern.EitherType<Mesh, SkinnedMesh>>>), {}>;
-	@:optional var loadBufferView : haxe.extern.EitherType<(Float->Promise<ArrayBuffer>), {}>;
-	@:optional var loadMaterial : haxe.extern.EitherType<(Float->Promise<Material>), {}>;
-	@:optional var loadTexture : haxe.extern.EitherType<(Float->Promise<Texture>), {}>;
-	@:optional var getMaterialType : haxe.extern.EitherType<(Float->typeof Material), {}>;
-	@:optional var extendMaterialParams : haxe.extern.EitherType<, haxe.extern.EitherType<(Float->Dynamic<Dynamic>->Promise<Dynamic>), {}>>;
-	@:optional var createNodeMesh : haxe.extern.EitherType<(Float->Promise<haxe.extern.EitherType<Group, haxe.extern.EitherType<Mesh, SkinnedMesh>>>), {}>;
-	@:optional var createNodeAttachment : haxe.extern.EitherType<(Float->Promise<Object3D>), {}>;
+    
+	@:optional var beforeRoot : Void->Promise<Void>;
+	@:optional var afterRoot : GLTF->Promise<Void>;
+	@:optional var loadNode : Float->Promise<Object3D>;
+	@:optional var loadMesh : Float->Promise<EitherType<Group, EitherType<Mesh, SkinnedMesh>>>;
+	@:optional var loadBufferView : Float->Promise<ArrayBuffer>;
+	@:optional var loadMaterial : Float->Promise<Material>;
+	@:optional var loadTexture : Float->Promise<Texture>;
+	@:optional var getMaterialType : Float->Dynamic; // typeof Material;
+	@:optional var extendMaterialParams : Float->Dynamic->Promise<Dynamic>;
+	@:optional var createNodeMesh : Float->Promise<EitherType<Group, EitherType<Mesh, SkinnedMesh>>>;
+	@:optional var createNodeAttachment : Float->Promise<Object3D>;
 }

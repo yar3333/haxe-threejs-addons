@@ -1,5 +1,10 @@
 package js.three.addons.utils;
 
+import js.html.MessageEvent;
+import js.html.Worker;
+import js.html.Transferable;
+import js.lib.Promise;
+
 /**
  * @author Deepkolos / https://github.com/deepkolos
  */

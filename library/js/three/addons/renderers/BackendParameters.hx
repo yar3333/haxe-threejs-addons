@@ -1,6 +1,8 @@
 package js.three.addons.renderers;
 
-extern interface BackendParameters
+import js.html.CanvasElement;
+
+typedef BackendParameters =
 {
-	@:optional var canvas : haxe.extern.EitherType<HTMLCanvasElement, {}>;
+	@:optional var canvas : CanvasElement;
 }

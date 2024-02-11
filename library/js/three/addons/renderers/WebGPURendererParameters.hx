@@ -1,8 +1,6 @@
 package js.three.addons.renderers;
 
-extern interface WebGPURendererParameters
-	extends RendererParameters
-	extends WebGPUBackendParameters
-{
-	@:optional var forceWebGL : haxe.extern.EitherType<Bool, {}>;
+typedef WebGPURendererParameters =
+{>RendererParameters, >WebGPUBackendParameters,
+	@:optional var forceWebGL : Bool;
 }

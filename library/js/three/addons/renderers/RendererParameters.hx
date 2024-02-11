@@ -1,7 +1,7 @@
 package js.three.addons.renderers;
 
-extern interface RendererParameters
+typedef RendererParameters =
 {
-	@:optional var logarithmicDepthBuffer : haxe.extern.EitherType<Bool, {}>;
-	@:optional var alpha : haxe.extern.EitherType<Bool, {}>;
+	@:optional var logarithmicDepthBuffer : Bool;
+	@:optional var alpha : Bool;
 }

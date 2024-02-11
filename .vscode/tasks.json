@@ -27,6 +27,24 @@
                 "panel": "shared"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "refactor: optimize haxe",
+            "type": "shell",
+            "command": "haxelib",
+            "args": [
+                "run",
+                "refactor",
+                "optimize_haxe",
+                "${relativeFile}"
+            ],
+            "presentation": {
+                "clear": true,
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
         }
     ]
 }
