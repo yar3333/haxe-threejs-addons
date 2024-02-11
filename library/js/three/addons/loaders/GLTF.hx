@@ -1,7 +1,7 @@
 package js.three.addons.loaders;
 
+import js.three.objects.Group;
 import js.three.animation.AnimationClip;
-import js.three.addons.libs.tween.Group;
 import js.three.cameras.Camera;
 
 typedef GLTF =

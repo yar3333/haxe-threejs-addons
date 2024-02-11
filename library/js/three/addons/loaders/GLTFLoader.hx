@@ -1,5 +1,6 @@
 package js.three.addons.loaders;
 
+import haxe.extern.EitherType;
 import js.html.ErrorEvent;
 import js.lib.ArrayBuffer;
 import js.lib.Promise;
@@ -18,6 +19,6 @@ extern class GLTFLoader extends Loader<GLTF>
 	function unregister(callback:GLTFParser->GLTFLoaderPlugin) : GLTFLoader;
 	function setKTX2Loader(ktx2Loader:KTX2Loader) : GLTFLoader;
 	function setMeshoptDecoder(meshoptDecoder:Dynamic) : GLTFLoader;
-	function parse(data:haxe.extern.EitherType<ArrayBuffer, String>, path:String, onLoad:GLTF->Void, ?onError:ErrorEvent->Void) : Void;
-	function parseAsync(data:haxe.extern.EitherType<ArrayBuffer, String>, path:String) : Promise<GLTF>;
+	function parse(data:EitherType<ArrayBuffer, EitherType<String, Dynamic>>, path:String, onLoad:GLTF->Void, ?onError:ErrorEvent->Void) : Void;
+	function parseAsync(data:EitherType<ArrayBuffer, EitherType<String, Dynamic>>, path:String) : Promise<GLTF>;
 }
