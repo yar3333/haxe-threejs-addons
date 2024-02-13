@@ -1,7 +1,7 @@
 @IF NOT EXIST ..\examples GOTO NO_EXAMPLES
 @del examples.zip 2>NUL
 @echo Zipping examples...
-@7z a -tzip examples.zip ..\examples
+@7z a -tzip examples.zip ..\examples -xr!*\node_modules
 :NO_EXAMPLES
 
 @del library.zip 2>NUL
