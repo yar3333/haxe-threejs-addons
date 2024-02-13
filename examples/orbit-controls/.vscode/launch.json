@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run webpack serve",
-            "command": "npm run serve",
+            "name": "Launch browser",
+            "type": "node",
             "request": "launch",
-            "type": "node-terminal"
+            "runtimeExecutable": "cmd.exe",
+            "runtimeArgs": [ "/C", "start", "file://${workspaceRoot}/dist/index.html" ]
         }
     ]
 }

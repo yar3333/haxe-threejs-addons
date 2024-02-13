@@ -4,7 +4,7 @@ package js.three.addons.nodes.core;
 // import NodeBuilder from "./NodeBuilder.js";
 // import NodeFrame from "./NodeFrame.js";
 
-@:jsRequire("three/examples/jsm/nodes/core/Node.js", "Node")
+@:jsRequire("three/addons/nodes/core/Node.js", "Node")
 @:native("Node")
 extern abstract class Node
 {

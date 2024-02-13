@@ -22,7 +22,7 @@ import js.three.core.InterleavedBufferAttribute;
 import js.three.loaders.Loader;
 import js.html.ErrorEvent;
 
-@:jsRequire("three/examples/jsm/loaders/GLTFParser.js", "GLTFParser")
+@:jsRequire("three/addons/loaders/GLTFParser.js", "GLTFParser")
 @:native("GLTFParser")
 extern class GLTFParser
 {

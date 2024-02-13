@@ -2,7 +2,7 @@ package js.three.addons.renderers;
 
 import js.lib.Promise;
 
-@:jsRequire("three/examples/jsm/renderers/PostProcessing.js", "PostProcessing")
+@:jsRequire("three/addons/renderers/PostProcessing.js", "PostProcessing")
 @:native("PostProcessing")
 extern class PostProcessing
 {

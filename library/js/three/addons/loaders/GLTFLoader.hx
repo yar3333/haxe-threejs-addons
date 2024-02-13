@@ -7,7 +7,7 @@ import js.lib.Promise;
 import js.three.loaders.LoadingManager;
 import js.three.loaders.Loader;
 
-@:jsRequire("three/examples/jsm/loaders/GLTFLoader.js", "GLTFLoader")
+@:jsRequire("three/addons/loaders/GLTFLoader.js", "GLTFLoader")
 @:native("GLTFLoader")
 extern class GLTFLoader extends Loader<GLTF>
 {

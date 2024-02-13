@@ -2,7 +2,7 @@ package js.three.addons.renderers;
 
 import js.three.core.Object3D;
 
-@:jsRequire("three/examples/jsm/renderers/Info.js", "Info")
+@:jsRequire("three/addons/renderers/Info.js", "Info")
 @:native("Info")
 extern class Info
 {

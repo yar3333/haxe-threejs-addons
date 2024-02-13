@@ -16,7 +16,7 @@ import js.three.addons.renderers.WebGPURenderer;
 // import WebGPURenderer from "../renderers/webgpu/WebGPURenderer.js";
 // import { WorkerPool } from "../utils/WorkerPool.js";
 
-@:jsRequire("three/examples/jsm/loaders/KTX2Loader.js", "KTX2Loader")
+@:jsRequire("three/addons/loaders/KTX2Loader.js", "KTX2Loader")
 @:native("KTX2Loader")
 extern class KTX2Loader extends Loader<CompressedTexture>
 {

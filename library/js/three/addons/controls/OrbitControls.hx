@@ -10,7 +10,7 @@ import js.three.core.EventDispatcher;
 /**
  * Orbit controls allow the camera to orbit around a target.
  */
-@:jsRequire("three/examples/jsm/controls/OrbitControls.js", "OrbitControls")
+@:jsRequire("three/addons/controls/OrbitControls.js", "OrbitControls")
 @:native("OrbitControls")
 extern class OrbitControls extends EventDispatcher<OrbitControlsEventMap>
 {

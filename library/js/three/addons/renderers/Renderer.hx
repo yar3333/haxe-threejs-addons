@@ -28,7 +28,7 @@ import js.three.materials.Material;
 /**
  * Generic Renderer interface containing either a WebGL or WebGPU backend.
  */
-@:jsRequire("three/examples/jsm/renderers/Renderer.js", "Renderer")
+@:jsRequire("three/addons/renderers/Renderer.js", "Renderer")
 @:native("Renderer")
 extern class Renderer
 {

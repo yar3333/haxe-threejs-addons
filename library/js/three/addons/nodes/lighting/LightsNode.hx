@@ -5,7 +5,7 @@ import js.three.addons.nodes.shadernode.ShaderNodeObject;
 import js.three.addons.nodes.core.Node;
 import js.three.lights.Light;
 
-@:jsRequire("three/examples/jsm/nodes/lighting/LightsNode.js", "LightsNode")
+@:jsRequire("three/addons/nodes/lighting/LightsNode.js", "LightsNode")
 @:native("LightsNode")
 extern class LightsNode extends Node
 {

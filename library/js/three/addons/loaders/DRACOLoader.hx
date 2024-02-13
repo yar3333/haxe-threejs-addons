@@ -5,7 +5,7 @@ import js.three.loaders.Loader;
 import js.three.loaders.LoadingManager;
 import js.html.ProgressEvent;
 
-@:jsRequire("three/examples/jsm/loaders/DRACOLoader.js", "DRACOLoader")
+@:jsRequire("three/addons/loaders/DRACOLoader.js", "DRACOLoader")
 @:native("DRACOLoader")
 extern class DRACOLoader extends Loader<BufferGeometry>
 {

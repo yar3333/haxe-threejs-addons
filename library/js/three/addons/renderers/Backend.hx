@@ -2,7 +2,7 @@ package js.three.addons.renderers;
 
 import js.html.CanvasElement;
 
-@:jsRequire("three/examples/jsm/renderers/Backend.js", "Backend")
+@:jsRequire("three/addons/renderers/Backend.js", "Backend")
 @:native("Backend")
 extern class Backend
 {
